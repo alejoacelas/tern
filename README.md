@@ -24,10 +24,12 @@ Run `tern doctor` to see what Tern can find on this machine (`claude`, `codex`, 
 
 ## Updates
 
-Tern checks this repository's latest release in the background, verifies a new version's
-signature, and installs it when you quit Tern. "Check for Updates…" in the Tern menu, or
-`tern update` (`--check` to only look, `--now` to install and relaunch at once), do the same on
-demand. Tern never quits by itself to install an update.
+Tern checks this repository's latest release in the background. When there's a newer version it
+asks first, in a note at the bottom of the sidebar (Download, Later, Skip), and downloads nothing
+until you say yes. "Check for Updates…" in the Tern menu, or `tern update`, also count as a yes.
+A downloaded update's signature is verified, and it installs when you quit Tern (`tern update
+--now` installs and relaunches at once). `tern update --check` looks for a newer version and
+`tern update --status` says where things stand. Tern never quits by itself to install an update.
 
 ## Uninstall
 
