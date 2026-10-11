@@ -22,6 +22,18 @@ files, and opens it. Nothing else needs to be installed first.
 
 Run `tern doctor` to see what Tern can find on this machine (`claude`, `codex`, `git`).
 
+## Agents
+
+`tern claude "task"` and `tern codex "task"` start a Claude Code or Codex session that works in
+the background and opens in its own interface in a new tab once its first turn is done. Agents can
+supervise other agents with `tern agent` (`tern agent --help` explains it in one screen): start
+sessions, wait for them, steer them with messages, read their replies, and show one to you.
+`tern agent open SESSION` shows a session read-only in a pane, with a Take Over button.
+
+To know what agents do in its terminals, Tern installs a small plugin for Claude Code and one for
+Codex when it starts (in `~/.claude` and `~/.codex`, with the agents' own commands). They report
+to Tern only inside Tern and do nothing anywhere else. `tern agent plugins` shows their state.
+
 ## Updates
 
 Tern checks this repository's latest release in the background. When there's a newer version it
@@ -34,6 +46,7 @@ A downloaded update's signature is verified, and it installs when you quit Tern 
 ## Uninstall
 
 ```sh
+tern agent plugins remove
 rm -rf /Applications/Tern.app ~/.local/bin/tern ~/Library/Application\ Support/Tern
 ```
 
