@@ -22,6 +22,14 @@ files, and opens it. Nothing else needs to be installed first.
 
 Run `tern doctor` to see what Tern can find on this machine (`claude`, `codex`, `git`).
 
+## Command blocks
+
+In zsh, Tern looks like Warp while your shell stays zsh: the prompt starts at the bottom and output
+builds upward, each command is a block with the folder it ran in, how long it took, the command in
+bold and its output, failed commands are marked in red, and the prompt shows the folder in a box.
+Full-screen programs (vim, less, agents' interfaces) get the whole pane. To keep zsh's own look,
+add `shell-integration-features = no-tern-blocks` to your Ghostty config (`~/.config/ghostty/config`).
+
 ## Agents
 
 `tern claude "task"` and `tern codex "task"` start a Claude Code or Codex session that works in
